@@ -1,0 +1,9 @@
+POST http://localhost:8181/api/books
+Content-Type: application/json
+
+{
+  "title": "Quarkus Microservice framework",
+  "author": "ABC",
+  "year_of_publication": 2010,
+  "genre": "IT-BookRequestModel"
+}

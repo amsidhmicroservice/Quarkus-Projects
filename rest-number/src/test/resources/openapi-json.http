@@ -1,0 +1,2 @@
+GET http://localhost:8282/q/openapi
+Content-Type: application/json

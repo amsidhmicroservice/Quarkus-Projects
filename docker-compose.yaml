@@ -1,0 +1,15 @@
+version: "3"
+services:
+  rest-number:
+    image: "amsid/rest-number:1.0.0-SNAPSHOT"
+    ports:
+      - 8282:8282
+  rest-book:
+    image: "amsid/rest-book:1.0-SNAPSHOT"
+    ports:
+      - 8181:8181
+    environment:
+      - number.service.isbn.endpoint/mp-rest/uri
+      - NUMBER_SERVICE_ISBN_ENDPOINT_MP_REST_URI=http://rest-number:8282
+    depends_on: [rest-number]
+
